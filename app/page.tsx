@@ -59,18 +59,54 @@ export default function Home() {
                     d="M321 288.5V261.5H323V250.5H324.5V244H325.5V241L329.5 234.5L334.5 233.5H351L352 237.5L353.5 238.5L354 243L355 244.5V249L355.5 250.5L356 259.5V292.5L355.5 328.5L356.5 330.5V334V397.5"
                     stroke="currentColor"
                   />
-                  <path d="M214 440.5H262.5M420.5 440.5H622" stroke="currentColor" />
-                  <path d="M404 475L427.059 474L453 475" stroke="currentColor" />
-                  <path d="M585 454L594.882 453L606 454" stroke="currentColor" />
-                  <path d="M543 450L552.882 449L564 450" stroke="currentColor" />
-                  <path d="M339 511.5L379.5 508L424 511.5" stroke="currentColor" />
-                  <path d="M339 577L393.318 573L453 577" stroke="currentColor" />
-                  <path d="M453 703L547.818 695L652 703" stroke="currentColor" />
-                  <path d="M460 536L505.741 533L556 536" stroke="currentColor" />
-                  <path d="M508 467L531.347 465L557 467" stroke="currentColor" />
-                  <path d="M315 455L338.347 453L364 455" stroke="currentColor" />
-                  <path d="M449 453L464.247 451L481 453" stroke="currentColor" />
-                  <path d="M252 487L275.347 484L301 487" stroke="currentColor" />
+                  <path
+                    d="M214 440.5H262.5M420.5 440.5H622"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M404 475L427.059 474L453 475"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M585 454L594.882 453L606 454"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M543 450L552.882 449L564 450"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M339 511.5L379.5 508L424 511.5"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M339 577L393.318 573L453 577"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M453 703L547.818 695L652 703"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M460 536L505.741 533L556 536"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M508 467L531.347 465L557 467"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M315 455L338.347 453L364 455"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M449 453L464.247 451L481 453"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M252 487L275.347 484L301 487"
+                    stroke="currentColor"
+                  />
                   <path
                     d="M277.5 552.5L209.5 550L109.5 571L46 584.5L9.5 604H-22"
                     stroke="currentColor"
@@ -79,7 +115,10 @@ export default function Home() {
                     d="M355.5 318.5L117.5 293M113 286.5L355.5 313.5M373 315L616.5 346.5M373 321L567.5 346.5"
                     stroke="currentColor"
                   />
-                  <path d="M100.5 262L356 293M372.5 295L616 331.5" stroke="currentColor" />
+                  <path
+                    d="M100.5 262L356 293M372.5 295L616 331.5"
+                    stroke="currentColor"
+                  />
                   <path
                     d="M372.5 330L388 328.5L401.5 329.5L411 328.5C413.167 328.5 417.6 328.5 418 328.5C418.4 328.5 423.833 328.167 426.5 328"
                     stroke="currentColor"
@@ -100,8 +139,14 @@ export default function Home() {
                     d="M333.5 92.5L326 93.5L324 95L322.5 96V98V100.5H321V103L319.5 104.5V132L324 134M333.5 92.5H354.5L357 95V97.5L357.5 99V129L356.5 130L356 132L353 133L349.5 134H324M333.5 92.5L327 94.5L326 97L325.5 101.5L324.5 102.5V105.5L324 107V134"
                     stroke="currentColor"
                   />
-                  <path d="M371 87C472.6 225.4 545 303 568.5 324.5" stroke="currentColor" />
-                  <path d="M334.5 34C339 41.1667 350 58.2 358 69" stroke="currentColor" />
+                  <path
+                    d="M371 87C472.6 225.4 545 303 568.5 324.5"
+                    stroke="currentColor"
+                  />
+                  <path
+                    d="M334.5 34C339 41.1667 350 58.2 358 69"
+                    stroke="currentColor"
+                  />
                   <path
                     d="M326 315.5L334.5 324V329.5L321.5 346M335.5 316.5L340 322L344 317.5M351.5 318L346 324V329.5L356.5 342M340 332.5L328 347.5H352.5L340 332.5Z"
                     stroke="currentColor"
@@ -112,7 +157,10 @@ export default function Home() {
                   />
                   <path d="M325.5 315.5V341" stroke="currentColor" />
                   <path d="M325.5 360V385.5" stroke="currentColor" />
-                  <path d="M355.5 310.5L123 283.5V270L356 297.5" stroke="currentColor" />
+                  <path
+                    d="M355.5 310.5L123 283.5V270L356 297.5"
+                    stroke="currentColor"
+                  />
                   <path d="M372.5 311.5L616.5 344" stroke="currentColor" />
                   <path d="M86.5 149V222" stroke="currentColor" />
                   <path d="M122 137V265" stroke="currentColor" />
