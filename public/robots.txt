@@ -1,0 +1,3 @@
+User-agent: *
+
+sitemap: https://next-valhalla-starter.netlify.app/sitemap-index.xml
