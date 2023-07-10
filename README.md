@@ -1,5 +1,7 @@
 # Next Valhalla Starter
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8734ce79-5346-4f4a-82b6-47b0de3e63a8/deploy-status)](https://app.netlify.com/sites/next-valhalla-starter/deploys)
+
 An image gallery starter built with [Next.js](https://nextjs.org).
 
 ## Running locally
