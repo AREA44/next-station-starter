@@ -1,0 +1,8 @@
+[build]
+  command = "pnpm run build"
+  publish = ".next"
+
+[[plugins]]
+  # Next.js Runtime
+  # see detail: https://github.com/netlify/next-runtime
+  package = "@netlify/plugin-nextjs"
