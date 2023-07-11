@@ -2,7 +2,7 @@
   "name": "@area44/next-valhalla-starter",
   "description": "An image gallery starter built with Next.js",
   "author": "AREA44",
-  "version": "23.7.10",
+  "version": "23.7.12",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -22,11 +22,10 @@
     "@types/node": "^20.4.1",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
-    
     "@typescript-eslint/parser": "^6.0.0",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.44.0",
-    "eslint-config-next": "13.4.9",
+    "eslint-config-next": "^13.4.9",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-tailwindcss": "^3.13.0",

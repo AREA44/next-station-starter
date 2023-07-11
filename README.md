@@ -19,7 +19,7 @@ pnpm dev
 
 ### Add your photos
 
-First, place your photos inside the folder `public/photos`. After that, you need to create a file at in `app/photos.ts` to edit.
+First, place your photos inside the folder `public/gallery`. After that, you need to create a file at in `app/gallery.ts` to edit.
 
 ### Change site information
 

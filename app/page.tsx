@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import photos from './photos';
+import gallery from '@/app/gallery';
 
 const title = 'NEXT VALHALLA STARTER';
-const description = 'An image gallery starter built with Next.js.';
+const description = 'An image gallery site built with Next.js.';
 const author = 'AREA44';
-const authorSite = 'https://github.com/AREA44';
+const authorURL = 'https://github.com/AREA44';
 
 export default function Home() {
   return (
@@ -194,12 +194,12 @@ export default function Home() {
               {description}
             </p>
           </div>
-          {photos.map(({ src, height, width, base64 }) => (
+          {gallery.map(({ src, height, width, base64 }) => (
             <Image
               key={src}
-              alt={`${src} photo`}
+              alt='Unsplash photo'
               className='mb-5 rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110'
-              src={`/photos/${src}`}
+              src={src}
               placeholder='blur'
               blurDataURL={base64}
               height={height}
@@ -215,7 +215,7 @@ export default function Home() {
       <footer className='p-6 text-center text-white/80 sm:p-12'>
         made with ❤️ by{' '}
         <a
-          href={authorSite}
+          href={authorURL}
           target='_blank'
           className='font-semibold hover:text-white'
           rel='noreferrer'
