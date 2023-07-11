@@ -23,7 +23,7 @@ First, place your photos inside the folder `public/photos`. After that, you need
 
 ### Change site information
 
-Change your site information at `app/layout.tsx` and `page.tsx`.
+Change your site information at `app/layout.tsx` and `app/page.tsx`.
 
 ### Change your public folder
 
