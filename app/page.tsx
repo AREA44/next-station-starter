@@ -197,7 +197,7 @@ export default function Home() {
           {images.map(({ src, height, width, base64 }) => (
             <Image
               key={src}
-              alt={'Image '`${src}`}
+              alt={`Image ${src}`}
               className='mb-5 rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110'
               src={src}
               placeholder='blur'
