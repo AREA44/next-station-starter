@@ -31,7 +31,7 @@
     "eslint-plugin-tailwindcss": "^3.13.0",
     "postcss": "^8.4.25",
     "prettier": "^3.0.0",
-    "prettier-plugin-tailwindcss": "^0.3.0",
+    "prettier-plugin-tailwindcss": "^0.4.0",
     "typescript": "^5.1.6"
   },
   "packageManager": "pnpm@8.6.7"
