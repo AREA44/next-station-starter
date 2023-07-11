@@ -199,7 +199,7 @@ export default function Home() {
               key={src}
               alt={`${src} photo`}
               className='mb-5 rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110'
-              src={src}
+              src={`/photos/${src}`}
               placeholder='blur'
               blurDataURL={base64}
               height={height}
