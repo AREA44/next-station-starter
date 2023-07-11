@@ -1,10 +1,12 @@
 import '@/app/globals.css';
 import type { Metadata } from 'next';
 
+const url = 'https://next-valhalla-starter.netlify.app';
 const title = 'Next Valhalla Starter';
 const description = 'An image gallery starter built with Next.js';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(url),
   title: title,
   description: description,
   icons: {
