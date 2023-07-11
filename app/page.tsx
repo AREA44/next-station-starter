@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import images from './images';
+import photos from './photos';
 
 const title = 'NEXT VALHALLA STARTER';
 const description = 'An image gallery starter built with Next.js.';
@@ -194,12 +194,12 @@ export default function Home() {
               {description}
             </p>
           </div>
-          {images.map(({ src, height, width, base64 }) => (
+          {photos.map(({ src, height, width, base64 }) => (
             <Image
               key={src}
-              alt={`Image ${src}`}
+              alt={`${src} photo`}
               className='mb-5 rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110'
-              src={`/images/${src}`}
+              src={src}
               placeholder='blur'
               blurDataURL={base64}
               height={height}
