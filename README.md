@@ -35,4 +35,4 @@ Licensed under the [MIT](LICENSE) license.
 
 ## Credits
 
-This project inspired from [Image Gallery Starter](https://vercel.com/templates/next.js/image-gallery-starter).
+This project inspired from [Image Gallery Starter](https://vercel.com/templates/next.js/image-gallery-starter) and [shadcn/ui](https://ui.shadcn.com).

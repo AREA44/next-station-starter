@@ -4,5 +4,6 @@ export default {
   semi: true,
   singleQuote: true,
   endOfLine: 'lf',
+  printWidth: 80,
   plugins: ['prettier-plugin-tailwindcss'],
 };

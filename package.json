@@ -2,7 +2,7 @@
   "name": "@area44/next-valhalla-starter",
   "description": "An image gallery starter built with Next.js",
   "author": "AREA44",
-  "version": "23.7.12",
+  "version": "23.7.14",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,10 +13,17 @@
     "format": "prettier --write . --cache"
   },
   "dependencies": {
+    "@radix-ui/react-aspect-ratio": "^1.0.3",
+    "@radix-ui/react-dialog": "^1.0.4",
+    "class-variance-authority": "^0.6.1",
+    "clsx": "^1.2.1",
+    "lucide-react": "^0.259.0",
     "next": "^13.4.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^3.3.2"
+    "tailwind-merge": "^1.13.2",
+    "tailwindcss": "^3.3.2",
+    "tailwindcss-animate": "^1.0.6"
   },
   "devDependencies": {
     "@types/node": "^20.4.1",
