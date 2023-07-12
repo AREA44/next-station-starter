@@ -1,8 +1,5 @@
-import Image from 'next/image';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import Bridge from '@/components/Brigde';
-import Gallery from '@/app/gallery';
+import Gallery from '@/components/Gallery';
 
 const title = 'NEXT VALHALLA STARTER';
 const description = 'An image gallery starter built with Next.js.';
@@ -28,35 +25,7 @@ export default function Home() {
               {description}
             </p>
           </div>
-          {Gallery.map(({ src, height, width, base64 }) => (
-            <Dialog>
-              <DialogTrigger asChild>
-                <AspectRatio
-                  ratio={3 / 2}
-                  className="after:content after:shadow-highlight group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg"
-                >
-                  <Image
-                    src={src}
-                    alt="Unsplash photo"
-                    className="transform rounded-lg object-cover brightness-90 transition will-change-auto group-hover:brightness-110"
-                    fill
-                  />
-                </AspectRatio>
-              </DialogTrigger>
-              <DialogContent className="p-9">
-                <Image
-                  key={src}
-                  alt="Unsplash photo"
-                  src={src}
-                  placeholder="blur"
-                  blurDataURL={base64}
-                  height={height}
-                  width={width}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, (max-width: 1536px) 33vw, 25vw"
-                />
-              </DialogContent>
-            </Dialog>
-          ))}
+          <Gallery />
         </div>
       </main>
       <footer className="p-6 text-center text-white/80 sm:p-12">

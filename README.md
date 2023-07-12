@@ -19,7 +19,7 @@ pnpm dev
 
 ### Add your photos
 
-First, place your photos inside the folder `public/gallery`. After that, you need to create a file at in `app/gallery.ts` to edit.
+First, place your photos inside the folder `public/gallery` and edit `components/Gallery.tsx`.
 
 ### Change site information
 
@@ -35,4 +35,4 @@ Licensed under the [MIT](LICENSE) license.
 
 ## Credits
 
-This project inspired from [Image Gallery Starter](https://vercel.com/templates/next.js/image-gallery-starter) and [shadcn/ui](https://ui.shadcn.com).
+This project is inspired by [Image Gallery Starter](https://vercel.com/templates/next.js/image-gallery-starter) and [shadcn/ui](https://ui.shadcn.com).
