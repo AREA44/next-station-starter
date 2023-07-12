@@ -1,11 +1,11 @@
-let gallery: Array<{
-  src: string
-  width: number
-  height: number
-  base64: string
-}>
+export type Gallery = {
+  src: string;
+  width: number;
+  height: number;
+  base64: string;
+};
 
-export default gallery = [
+const gallery: Gallery[] = [
   {
     src: '/gallery/angelo-pantazis-h0AnGGgseio-unsplash.jpg',
     width: 1703,
@@ -48,4 +48,6 @@ export default gallery = [
     base64:
       'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAECAIAAADETxJQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAM0lEQVR4nAEoANf/ACZWaQAJJgAJIgAAJzRwQnqBaZ8AS32Xu87+mbvpAL3Y/8X//26jxfPuEaA9S2GRAAAAAElFTkSuQmCC',
   },
-]
+];
+
+export default gallery;

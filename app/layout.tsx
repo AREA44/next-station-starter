@@ -15,14 +15,14 @@ export const metadata: Metadata = {
 };
 
 interface RootLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <head />
-      <body className='bg-black antialiased'>{children}</body>
+      <body className="bg-black antialiased">{children}</body>
     </html>
   );
 }
