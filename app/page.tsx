@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Gallery from '@/app/gallery'
 
 const title = 'NEXT VALHALLA STARTER'
-const description = 'An image gallery site built with Next.js.'
+const description = 'An image gallery starter built with Next.js.'
 const author = 'AREA44'
 const authorURL = 'https://github.com/AREA44'
 
