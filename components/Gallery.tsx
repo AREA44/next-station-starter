@@ -64,13 +64,15 @@ export default function Gallery() {
         >
           <Image
             src={src}
+            placeholder="blur"
+            blurDataURL={base64}
             alt="Unsplash photo"
             className="rounded-lg object-cover brightness-90 transition will-change-auto group-hover:brightness-110"
             fill
           />
         </AspectRatio>
       </DialogTrigger>
-      <DialogContent className="max-h-screen w-full p-0">
+      <DialogContent className="max-h-full w-full p-0">
         <Image
           key={src}
           alt="Unsplash photo"
