@@ -1,9 +1,9 @@
 {
+  "private": true,
   "name": "@area44/next-valhalla-starter",
   "description": "An image gallery starter built with Next.js",
   "author": "AREA44",
-  "version": "23.7.14",
-  "private": true,
+  "version": "23.7.16",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
