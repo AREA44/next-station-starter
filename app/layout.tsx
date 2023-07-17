@@ -20,8 +20,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
-      <head />
+    <html lang="en" suppressHydrationWarning>
       <body className="dark min-h-screen bg-background font-sans antialiased">
         {children}
       </body>
