@@ -15,7 +15,7 @@
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^1.0.3",
     "@radix-ui/react-dialog": "^1.0.4",
-    "class-variance-authority": "^0.6.1",
+    "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "glob": "^10.3.3",
     "lucide-react": "^0.262.0",
