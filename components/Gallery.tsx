@@ -7,8 +7,8 @@ import Image from 'next/image';
 
 async function getImages(pattern: string) {
   const images = await Promise.all(
-    glob.sync(pattern).map(async (file) => {
-      const src = file.replace('public\\gallery\\', '/gallery/');
+    glob.sync(pattern, { posix: true }).map(async (file) => {
+      const src = file.replace('public', '');
       const buffer = await fs.readFile(file);
       const {
         metadata: { height, width },
@@ -35,7 +35,6 @@ async function getImages(pattern: string) {
 }
 
 const images = await getImages('public/gallery/*.{jpg,png}');
-console.log(images);
 
 export default function Gallery() {
   return images.map(({ src, height, width, base64 }) => (
