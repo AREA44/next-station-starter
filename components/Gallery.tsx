@@ -54,7 +54,11 @@ export default function Gallery() {
           />
         </AspectRatio>
       </DialogTrigger>
-      <DialogContent className="max-h-full w-full p-0">
+      <DialogContent
+        className={`${
+          height > width == true ? 'max-h-full w-full' : 'sm:max-w-2xl'
+        } p-0`}
+      >
         <Image
           src={src}
           placeholder="blur"
