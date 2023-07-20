@@ -56,7 +56,7 @@ export default function Gallery() {
       </DialogTrigger>
       <DialogContent
         className={`${
-          height > width == true ? 'max-h-full w-full' : 'sm:max-w-2xl'
+          height > width == true ? 'max-h-full w-full' : 'sm:max-w-[625px]'
         } p-0`}
       >
         <Image
