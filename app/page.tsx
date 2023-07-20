@@ -21,7 +21,7 @@ export default function Home() {
             <h1 className="mb-4 mt-8 text-base font-bold uppercase tracking-widest">
               {title}
             </h1>
-            <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
+            <p className="max-w-[640px] text-white/75 sm:max-w-[510px]">
               {description}
             </p>
           </div>
