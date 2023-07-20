@@ -48,7 +48,7 @@ export default function Gallery() {
             src={src}
             placeholder="blur"
             blurDataURL={base64}
-            alt="Unsplash photo"
+            alt="Photo from Unsplash"
             className="rounded-lg object-cover brightness-90 transition will-change-auto group-hover:brightness-110"
             fill
           />
@@ -56,7 +56,7 @@ export default function Gallery() {
       </DialogTrigger>
       <DialogContent
         className={`${
-          height > width == true ? 'max-h-full w-full' : 'sm:max-w-[625px]'
+          height > width == true ? 'max-w-[400px]' : 'max-w-[600px]'
         } p-0`}
       >
         <Image
@@ -65,8 +65,8 @@ export default function Gallery() {
           blurDataURL={base64}
           height={height}
           width={width}
-          alt="Unsplash photo"
-          sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, (max-width: 1536px) 33vw, 25vw"
+          alt="Photo from Unsplash"
+          className="object-contain sm:rounded-lg"
         />
       </DialogContent>
     </Dialog>
