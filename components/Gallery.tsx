@@ -35,6 +35,7 @@ async function getImages(pattern: string) {
 }
 
 const images = await getImages('public/gallery/*.{jpg,png}');
+console.log(images);
 
 export default function Gallery() {
   return images.map(({ src, height, width, base64 }) => (
