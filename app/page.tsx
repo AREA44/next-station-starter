@@ -4,7 +4,7 @@ import Gallery from '@/components/Gallery';
 const title = 'NEXT VALHALLA STARTER';
 const description = 'An image gallery starter built with Next.js.';
 const author = 'AREA44';
-const authorURL = 'https://github.com/AREA44';
+const authorURL = 'https://github.com/AREA44/next-valhalla-starter';
 
 export default function Home() {
   return (
@@ -30,7 +30,7 @@ export default function Home() {
       </main>
       <footer className="flex flex-col justify-between space-y-4 p-6 text-center text-white/80 sm:p-12">
         <div>
-          made with ❤️ by{' '}
+          made with love by{' '}
           <a
             href={authorURL}
             target="_blank"
