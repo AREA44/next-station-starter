@@ -18,27 +18,28 @@ export default function Home() {
               </span>
               <span className="absolute inset-x-0 bottom-0 h-[400px] bg-gradient-to-b from-black/0 via-black to-black"></span>
             </div>
-            <h1 className="mb-4 mt-8 text-base font-bold uppercase tracking-widest">
+            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
               {title}
             </h1>
-            <p className="max-w-[640px] text-white/75 sm:max-w-[510px]">
-              {description}
-            </p>
+            <p className="text-xl text-muted-foreground">{description}</p>
           </div>
           <Gallery />
         </div>
       </main>
-      <footer className="flex flex-col justify-between space-y-4 p-6 text-center text-white/80 sm:p-12">
-        <div>
-          made with love by{' '}
-          <a
-            href={authorURL}
-            target="_blank"
-            className="font-semibold hover:text-white"
-            rel="noreferrer"
-          >
-            {author}
-          </a>
+      <footer className="border-t py-6 md:px-8 md:py-0">
+        <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+          <p className="text-center text-sm leading-loose text-muted-foreground">
+            Made with love by{' '}
+            <a
+              href={authorURL}
+              target="_blank"
+              className="font-medium underline underline-offset-4"
+              rel="noreferrer"
+            >
+              {author}
+            </a>
+            .
+          </p>
         </div>
       </footer>
     </>
