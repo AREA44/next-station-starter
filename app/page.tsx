@@ -1,10 +1,10 @@
-import Bridge from '@/components/Brigde';
-import Gallery from '@/components/Gallery';
+import Bridge from '@/components/Brigde'
+import Gallery from '@/components/Gallery'
 
-const title = 'NEXT VALHALLA STARTER';
-const description = 'An image gallery starter built with Next.js.';
-const author = 'AREA44';
-const authorURL = 'https://github.com/AREA44/next-valhalla-starter';
+const title = 'NEXT VALHALLA STARTER'
+const description = 'An image gallery starter built with Next.js.'
+const author = 'AREA44'
+const authorURL = 'https://github.com/AREA44/next-valhalla-starter'
 
 export default function Home() {
   return (
@@ -43,5 +43,5 @@ export default function Home() {
         </div>
       </footer>
     </>
-  );
+  )
 }

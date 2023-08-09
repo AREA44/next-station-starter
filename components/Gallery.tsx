@@ -1,30 +1,30 @@
-import fs from 'node:fs/promises';
-import { glob } from 'glob';
-import { getPlaiceholder } from 'plaiceholder';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
-import Image from 'next/image';
+import fs from 'node:fs/promises'
+import { glob } from 'glob'
+import { getPlaiceholder } from 'plaiceholder'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
+import Image from 'next/image'
 
 async function getImages(pattern: string) {
-  const files = glob.sync(pattern, { posix: true });
+  const files = glob.sync(pattern, { posix: true })
   const imagePromises = files.map(async (file) => {
-    const src = file.replace('public', '');
-    const buffer = await fs.readFile(file);
+    const src = file.replace('public', '')
+    const buffer = await fs.readFile(file)
     const {
       metadata: { height, width },
       base64,
-    } = await getPlaiceholder(buffer);
-    return { src, width, height, base64 };
-  });
+    } = await getPlaiceholder(buffer)
+    return { src, width, height, base64 }
+  })
 
-  const images = await Promise.all(imagePromises);
+  const images = await Promise.all(imagePromises)
 
-  images.sort((a, b) => a.src.localeCompare(b.src));
+  images.sort((a, b) => a.src.localeCompare(b.src))
 
-  return images;
+  return images
 }
 
-const images = await getImages('public/gallery/*.{jpg,png}');
+const images = await getImages('public/gallery/*.{jpg,png}')
 
 export default function Gallery() {
   return images.map(({ src, height, width, base64 }) => (
@@ -60,5 +60,5 @@ export default function Gallery() {
         />
       </DialogContent>
     </Dialog>
-  ));
+  ))
 }

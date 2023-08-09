@@ -1,12 +1,12 @@
-import '@/app/globals.css';
-import type { Metadata } from 'next';
+import '@/app/globals.css'
+import type { Metadata } from 'next'
 
-import { fontSans } from '@/lib/fonts';
-import { cn } from '@/lib/utils';
+import { fontSans } from '@/lib/fonts'
+import { cn } from '@/lib/utils'
 
-const url = 'https://next-valhalla-starter.netlify.app';
-const title = 'Next Valhalla Starter';
-const description = 'An image gallery starter built with Next.js';
+const url = 'https://next-valhalla-starter.netlify.app'
+const title = 'Next Valhalla Starter'
+const description = 'An image gallery starter built with Next.js'
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -15,10 +15,10 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
-};
+}
 
 interface RootLayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
@@ -33,5 +33,5 @@ export default function RootLayout({ children }: RootLayoutProps) {
         {children}
       </body>
     </html>
-  );
+  )
 }
