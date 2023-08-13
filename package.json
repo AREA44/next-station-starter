@@ -1,16 +1,16 @@
 {
-  "private": true,
   "name": "@area44/next-valhalla-starter",
+  "version": "23.7.27",
+  "private": true,
   "description": "An image gallery starter built with Next.js",
   "author": "AREA44",
-  "version": "23.7.27",
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "dev": "next dev",
+    "format": "prettier --write . --cache",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "format": "prettier --write . --cache"
+    "start": "next start"
   },
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^1.0.3",
