@@ -5,7 +5,7 @@ import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import Image from 'next/image'
 
-async function getImages(pattern: string) {
+async function ImageMetaFetcher(pattern: string) {
   const files = glob.sync(pattern, { posix: true })
   const imagePromises = files.map(async (file) => {
     const src = file.replace('public', '')
@@ -24,7 +24,7 @@ async function getImages(pattern: string) {
   return images
 }
 
-const images = await getImages('public/gallery/*.{jpg,png}')
+const images = await ImageMetaFetcher('public/gallery/*.{jpg,jpeg,png}')
 
 export default function Gallery() {
   return images.map(({ src, height, width, base64 }) => (
