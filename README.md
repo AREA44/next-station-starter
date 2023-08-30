@@ -1,12 +1,12 @@
 # Next Valhalla Starter
 
-An image gallery starter built with [Next.js](https://nextjs.org).
+Next Valhalla Starter is an image gallery starter built with [Next.js](https://nextjs.org).
 
-## Running locally
+## Running Locally
 
-This application requires Node.js v18+.
+To run the application locally, make sure you have Node.js v18+ installed on your machine.
 
-```sh
+```bash
 git clone https://github.com/AREA44/next-valhalla-starter
 cd next-valhalla-starter
 pnpm install
@@ -15,21 +15,22 @@ pnpm dev
 
 ## Quick Start
 
-### Add your gallery
+### Add Your Gallery
 
-To add your gallery, place your photos inside the `public/gallery` directory. Next.js will automatically pick up the photos in this directory and display them on your website.
+To add your own image gallery, simply place your photos inside the `public/gallery` directory. Next.js will automatically detect these photos and display them on your website.
 
-### Change site information
+### Change Site Information
 
-To change your site information, you need to update the following files `app/layout.tsx` and `app/page.tsx`. In these files, you will find information about your website like title, description, url, favicon etc. Simply update the corresponding value.
+To change your site information, update the following files:
+- `app/layout.tsx`: This file contains information about your website's title, description, URL, favicon, etc. Update the corresponding values in this file.
+- `app/page.tsx`: This file contains additional information about your website. Update the values according to your requirements.
 
-You also update the favicon, Open Graph image
-and Twitter image in the `app` directory too.
+You can also update the favicon, Open Graph image, and Twitter image in the `app` directory.
 
 ## License
 
-Licensed under the [MIT](LICENSE) license.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 ## Credits
 
-Inspired by [Image Gallery Starter](https://vercel.com/templates/next.js/image-gallery-starter) and [shadcn/ui](https://ui.shadcn.com).
+Next Valhalla Starter is inspired by the [Image Gallery Starter](https://vercel.com/templates/next.js/image-gallery-starter) and [shadcn/ui](https://ui.shadcn.com) projects.
