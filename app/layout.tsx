@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { fontSans } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
 
-const url = 'https://next-valhalla-starter.netlify.app'
+const url = 'https://next-valhalla-starter.vercel.app'
 const title = 'Next Valhalla Starter'
 const description = 'An image gallery starter built with Next.js'
 
