@@ -15,6 +15,17 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
+  openGraph: {
+    title: title,
+    description: description,
+    url: url,
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    title: title,
+    card: 'summary_large_image',
+  },
 }
 
 interface RootLayoutProps {
