@@ -24,7 +24,7 @@ async function ImageMetaFetcher(pattern: string) {
   return images
 }
 
-const images = await ImageMetaFetcher('public/gallery/*.{jpg,jpeg,png}')
+const images = await ImageMetaFetcher('public/gallery/*.{jpg,jpeg,png,webp}')
 
 export default function Gallery() {
   return images.map(({ src, height, width, base64 }) => (
@@ -32,14 +32,14 @@ export default function Gallery() {
       <DialogTrigger asChild>
         <AspectRatio
           ratio={3 / 2}
-          className="after:content after:shadow-highlight group relative cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg"
+          className="after:content after:shadow-highlight group relative cursor-zoom-in overflow-hidden rounded-lg after:pointer-events-none after:absolute after:inset-0"
         >
           <Image
             src={src}
             placeholder="blur"
             blurDataURL={base64}
             alt="Photo from Unsplash"
-            className="rounded-lg object-cover brightness-90 transition will-change-auto group-hover:brightness-110"
+            className="object-cover transition will-change-auto group-hover:scale-110"
             fill
           />
         </AspectRatio>
@@ -56,7 +56,7 @@ export default function Gallery() {
           height={height}
           width={width}
           alt="Photo from Unsplash"
-          className="object-contain sm:rounded-lg"
+          className="rounded-lg object-contain"
         />
       </DialogContent>
     </Dialog>
