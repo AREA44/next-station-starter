@@ -32,7 +32,7 @@ export default function Gallery() {
       <DialogTrigger asChild>
         <AspectRatio
           ratio={3 / 2}
-          className="after:content after:shadow-highlight group relative cursor-zoom-in overflow-hidden rounded-lg after:pointer-events-none after:absolute after:inset-0"
+          className="group relative cursor-zoom-in overflow-hidden rounded-lg after:pointer-events-none after:absolute after:inset-0"
         >
           <Image
             src={src}
