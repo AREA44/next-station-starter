@@ -8,7 +8,7 @@ const Cobe = () => {
 
   useEffect(() => {
     let phi = 0
-    let width = 600
+    let width = 0
 
     const onResize = () => {
       if (canvasRef.current) {
