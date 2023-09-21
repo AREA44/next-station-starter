@@ -24,7 +24,7 @@ const Cobe = () => {
       width: width * 2,
       height: width * 2,
       phi: 0,
-      theta: -0.1,
+      theta: 0.2,
       dark: 1,
       diffuse: 1.2,
       mapSamples: 16000,
@@ -36,8 +36,6 @@ const Cobe = () => {
       onRender: (state) => {
         state.phi = phi
         phi += 0.005
-        state.width = width * 2
-        state.height = width * 2
       },
     })
 
