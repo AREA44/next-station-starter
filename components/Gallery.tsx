@@ -1,9 +1,10 @@
 import fs from 'node:fs/promises'
+import Image from 'next/image'
 import { glob } from 'glob'
 import { getPlaiceholder } from 'plaiceholder'
+
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
-import Image from 'next/image'
 
 async function ImageMetaFetcher(pattern: string) {
   const files = glob.sync(pattern, { posix: true })

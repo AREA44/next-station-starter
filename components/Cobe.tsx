@@ -1,7 +1,7 @@
 'use client'
 
-import createGlobe from 'cobe'
 import { useEffect, useRef } from 'react'
+import createGlobe from 'cobe'
 
 export default function Cobe() {
   const canvasRef = useRef()
