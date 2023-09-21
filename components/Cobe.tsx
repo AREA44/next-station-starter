@@ -1,16 +1,24 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import createGlobe from 'cobe'
 
-export default function Cobe() {
-  const canvasRef = useRef()
+const Cobe = () => {
+  const canvasRef = useRef(null)
 
   useEffect(() => {
     let phi = 0
     let width = 600
 
-    // Full API: https://cobe.vercel.app/docs/api
+    const onResize = () => {
+      if (canvasRef.current) {
+        width = canvasRef.current.offsetWidth
+      }
+    }
+
+    window.addEventListener('resize', onResize)
+    onResize()
+
     const globe = createGlobe(canvasRef.current, {
       devicePixelRatio: 2,
       width: width * 2,
@@ -27,19 +35,30 @@ export default function Cobe() {
       markers: [{ location: [21.18541, 106.07503], size: 0.04 }],
       onRender: (state) => {
         state.phi = phi
-        phi += 0.01
+        phi += 0.005
+        state.width = width * 2
+        state.height = width * 2
       },
+    })
+
+    setTimeout(() => {
+      if (canvasRef.current) {
+        canvasRef.current.style.opacity = '1'
+      }
     })
 
     return () => {
       globe.destroy()
+      window.removeEventListener('resize', onResize)
     }
   }, [])
 
   return (
     <canvas
       ref={canvasRef}
-      style={{ width: 600, height: 600, maxWidth: '100%', aspectRatio: 1 }}
+      style={{ width: '100%', height: '100%', aspectRatio: 1 }}
     />
   )
 }
+
+export default Cobe

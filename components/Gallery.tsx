@@ -27,7 +27,7 @@ async function ImageMetaFetcher(pattern: string) {
 
 const images = await ImageMetaFetcher('public/gallery/*.{jpg,jpeg,png,webp}')
 
-export default function Gallery() {
+const Gallery = () => {
   return images.map(({ src, height, width, base64 }) => (
     <Dialog>
       <DialogTrigger asChild>
@@ -63,3 +63,5 @@ export default function Gallery() {
     </Dialog>
   ))
 }
+
+export default Gallery
