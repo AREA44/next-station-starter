@@ -47,7 +47,7 @@ export default function Gallery() {
       <DialogContent
         className={`${
           height > width == true ? 'max-w-[400px]' : 'max-w-[600px]'
-        } p-0`}
+        } rounded-lg p-0`}
       >
         <Image
           src={src}
