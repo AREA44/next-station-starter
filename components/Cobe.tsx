@@ -54,7 +54,7 @@ const Cobe = () => {
   return (
     <canvas
       ref={canvasRef}
-      style={{ width: '100%', height: '100%', aspectRatio: 1 }}
+      style={{ width: 400, height: 400, aspectRatio: 1 }}
     />
   )
 }
