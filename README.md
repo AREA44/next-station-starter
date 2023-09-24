@@ -1,14 +1,14 @@
-# Next Valhalla Starter
+# Next Station Starter
 
-Next Valhalla Starter is an image gallery starter built with [Next.js](https://nextjs.org).
+Next Station Starter is an image gallery starter built with [Next.js](https://nextjs.org).
 
 ## Running Locally
 
 To run the application locally, make sure you have Node.js v18+ installed on your machine.
 
 ```bash
-git clone https://github.com/AREA44/next-valhalla-starter
-cd next-valhalla-starter
+git clone https://github.com/AREA44/next-station-starter
+cd next-station-starter
 pnpm install
 pnpm dev
 ```
@@ -34,4 +34,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Credits
 
-Next Valhalla Starter is inspired by the [Image Gallery Starter](https://vercel.com/templates/next.js/image-gallery-starter) and [shadcn/ui](https://ui.shadcn.com) projects.
+Next Station Starter is inspired by the [Image Gallery Starter](https://vercel.com/templates/next.js/image-gallery-starter) and [shadcn/ui](https://ui.shadcn.com) projects.

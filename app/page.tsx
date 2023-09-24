@@ -1,10 +1,10 @@
 import Cobe from '@/components/Cobe'
 import Gallery from '@/components/Gallery'
 
-const title = 'NEXT VALHALLA STARTER'
+const title = 'NEXT STATION STARTER'
 const description = 'An image gallery starter built with Next.js.'
 const author = 'AREA44'
-const authorURL = 'https://github.com/AREA44/next-valhalla-starter'
+const authorURL = 'https://github.com/AREA44/next-station-starter'
 
 export default function Home() {
   return (
