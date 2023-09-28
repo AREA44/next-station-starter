@@ -11,7 +11,11 @@ async function ImageMetaFetcher(pattern: string) {
     const src = file.replace('public', '')
     const metadata = await sharp(file).metadata()
     const { width, height, format } = metadata
-    const buffer = await sharp(file).toBuffer()
+    const buffer = await sharp(file)
+      .resize(10, 10, {
+        fit: 'inside',
+      })
+      .toBuffer()
     const base64 = `data:image/${format};base64,${buffer.toString('base64')}`
     return { src, width, height, base64 }
   })
