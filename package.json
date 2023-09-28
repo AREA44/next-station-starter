@@ -1,6 +1,6 @@
 {
   "name": "@area44/next-station-starter",
-  "version": "23.9.24",
+  "version": "23.9.28",
   "private": true,
   "description": "An image gallery starter built with Next.js",
   "author": "AREA44",
@@ -20,8 +20,7 @@
     "cobe": "^0.6.3",
     "glob": "^10.3.6",
     "lucide-react": "^0.279.0",
-    "next": "^13.5.2",
-    "plaiceholder": "^3.0.0",
+    "next": "^13.5.3",
     "postcss": "^8.4.30",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
