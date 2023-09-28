@@ -1,7 +1,6 @@
-import fs from 'node:fs/promises'
 import Image from 'next/image'
 import { glob } from 'glob'
-import { getPlaiceholder } from 'plaiceholder'
+import sharp from 'sharp'
 
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
@@ -10,11 +9,10 @@ async function ImageMetaFetcher(pattern: string) {
   const files = glob.sync(pattern, { posix: true })
   const imagePromises = files.map(async (file) => {
     const src = file.replace('public', '')
-    const buffer = await fs.readFile(file)
-    const {
-      metadata: { height, width },
-      base64,
-    } = await getPlaiceholder(buffer)
+    const metadata = await sharp(file).metadata()
+    const { width, height, format } = metadata
+    const buffer = await sharp(file).resize(width, height).toBuffer()
+    const base64 = `data:image/${format};base64,${buffer.toString('base64')}`
     return { src, width, height, base64 }
   })
 
