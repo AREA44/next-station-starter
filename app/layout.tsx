@@ -2,29 +2,29 @@ import '@/app/globals.css'
 
 import type { Metadata } from 'next'
 
+import { siteConfig } from '@/config/site'
 import { fontSans } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
 
-const url = 'https://next-station-starter.vercel.app'
-const title = 'Next Station Starter'
-const description = 'An image gallery starter built with Next.js'
-
 export const metadata: Metadata = {
-  metadataBase: new URL(url),
-  title: title,
-  description: description,
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
-    title: title,
-    description: description,
-    url: url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url,
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
-    title: title,
+    title: siteConfig.name,
     card: 'summary_large_image',
   },
 }
