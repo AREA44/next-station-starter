@@ -10,7 +10,7 @@ export default function NotFound() {
         Page not found
       </h2>
       <p className="mb-4 leading-7 [&:not(:first-child)]:mt-6">
-        Sorry, we couldn't find the page you're looking for.
+        Sorry, we could not find the page you are looking for.
       </p>
       <Link href="/" className={buttonVariants()}>
         {' '}
