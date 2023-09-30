@@ -21,10 +21,7 @@ To add your own image gallery, simply place your photos inside the `public/galle
 
 ### Change Site Information
 
-To change your site information, update the following files:
-
-- `app/layout.tsx`: This file contains information about your website's title, description, URL, favicon, etc. Update the corresponding values in this file.
-- `app/page.tsx`: This file contains additional information about your website. Update the values according to your requirements.
+To change your site information, update `config/site.ts`. This file contains information about your website's name, description, URL, etc. Update the corresponding values in this file.
 
 You can also update the favicon, Open Graph image, and Twitter image in the `app` directory.
 
