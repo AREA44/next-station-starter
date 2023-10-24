@@ -1,6 +1,6 @@
 {
-  "buildCommand": "next build",
   "installCommand": "pnpm install",
+  "buildCommand": "next build",
   "github": {
     "silent": true
   }
