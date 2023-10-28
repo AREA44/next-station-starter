@@ -25,6 +25,7 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
+
       - name: Format with Prettier
         run: pnpm exec prettier -w . "!.github"
 
