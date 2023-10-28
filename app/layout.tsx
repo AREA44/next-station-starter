@@ -1,9 +1,9 @@
 import '@/app/globals.css'
 
 import type { Metadata } from 'next'
+import { GeistMono, GeistSans } from 'geist/font'
 
 import { siteConfig } from '@/config/site'
-import { fontSans } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
 
 export const metadata: Metadata = {
@@ -35,11 +35,11 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={cn(
           'dark min-h-screen bg-background font-sans antialiased',
-          fontSans.variable,
+          `${GeistSans.variable} ${GeistMono.variable}`,
         )}
       >
         {children}

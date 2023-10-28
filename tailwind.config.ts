@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss'
-import { fontFamily } from 'tailwindcss/defaultTheme'
 
 export default {
   darkMode: ['class'],
@@ -59,7 +58,8 @@ export default {
         sm: 'calc(var(--radius) - 4px)',
       },
       fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
+        sans: ['var(--font-geist-sans)'],
+        mono: ['var(--font-geist-mono)'],
       },
       keyframes: {
         'accordion-down': {
