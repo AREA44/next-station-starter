@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <main className="mx-auto max-w-[1960px] p-4">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-          <div className="relative col-span-1 row-span-3 flex flex-col items-center justify-end gap-4 overflow-hidden rounded-lg border bg-card px-6 pb-16 pt-64 text-center after:pointer-events-none after:absolute after:inset-0 after:rounded-lg sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:pt-0">
+          <div className="relative col-span-1 row-span-3 flex flex-col items-center justify-end gap-4 overflow-hidden text-balance rounded-lg border bg-card px-6 pb-16 pt-64 text-center after:pointer-events-none after:absolute after:inset-0 after:rounded-lg sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:pt-0">
             <div className="absolute inset-0 flex items-center justify-center opacity-30">
               <span className="flex max-h-full max-w-full items-center justify-center">
                 <Cobe />
