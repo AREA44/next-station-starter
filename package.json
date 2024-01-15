@@ -1,6 +1,6 @@
 {
   "name": "@area44/next-station-starter",
-  "version": "23.12.24",
+  "version": "24.01.15",
   "private": true,
   "description": "An image gallery starter built with Next.js",
   "author": "AREA44",
@@ -20,14 +20,14 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "cobe": "^0.6.3",
-    "geist": "^1.2.0",
+    "geist": "^1.2.1",
     "glob": "^10.3.10",
     "lucide-react": "^0.307.0",
     "next": "^14.0.4",
     "postcss": "^8.4.33",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sharp": "^0.33.1",
+    "sharp": "^0.33.2",
     "tailwind-merge": "^2.2.0",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7"
@@ -43,9 +43,9 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-tailwindcss": "^3.13.1",
-    "prettier": "^3.1.1",
+    "prettier": "^3.2.2",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "typescript": "^5.3.3"
   },
-  "packageManager": "pnpm@8.14.0"
+  "packageManager": "pnpm@8.14.1"
 }
