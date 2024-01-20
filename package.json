@@ -1,12 +1,12 @@
 {
   "name": "@area44/next-station-starter",
-  "version": "23.12.24",
+  "version": "24.01.20",
   "private": true,
   "description": "An image gallery starter built with Next.js",
   "author": "AREA44",
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "format": "prettier --write . --cache",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
