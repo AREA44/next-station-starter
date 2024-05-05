@@ -8,8 +8,6 @@
     "build": "next build",
     "dev": "next dev --turbo",
     "format": "prettier --write . --cache",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
     "start": "next start"
   },
   "dependencies": {
@@ -37,11 +35,6 @@
     "@types/node": "^20.12.8",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/parser": "^7.8.0",
-    "eslint": "^9.2.0",
-    "eslint-config-next": "^14.2.3",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-tailwindcss": "^3.15.1",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "typescript": "^5.4.5"
