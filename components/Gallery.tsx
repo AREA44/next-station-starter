@@ -5,33 +5,36 @@ import sharp from 'sharp'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 
-async function ImageMetaFetcher(pattern: string) {
-  const files = glob.sync(pattern, { posix: true })
-  const imagePromises = files.map(async (file) => {
-    const src = file.replace('public', '')
-    const metadata = await sharp(file).metadata()
-    const { width, height, format } = metadata
-    const buffer = await sharp(file)
-      .resize(10, 10, {
-        fit: 'inside',
-      })
-      .toBuffer()
-    const base64 = `data:image/${format};base64,${buffer.toString('base64')}`
-    return { src, width, height, base64 }
-  })
-
-  const images = await Promise.all(imagePromises)
-
-  images.sort((a, b) => a.src.localeCompare(b.src))
-
-  return images
+async function fetchImageMetadata(pattern: string) {
+  try {
+    const files = glob.sync(pattern, { posix: true })
+    const imagePromises = files.map(async (file) => {
+      const src = file.replace('public', '')
+      const metadata = await sharp(file).metadata()
+      if (!metadata) throw new Error('Failed to fetch metadata for ' + file)
+      const { width, height, format } = metadata
+      const buffer = await sharp(file)
+        .resize(10, 10, {
+          fit: 'inside',
+        })
+        .toBuffer()
+      const base64 = `data:image/${format};base64,${buffer.toString('base64')}`
+      return { src, width, height, base64 }
+    })
+    return await Promise.all(imagePromises)
+  } catch (error) {
+    console.error('Error fetching image metadata:', error)
+    return []
+  }
 }
 
-const images = await ImageMetaFetcher('public/gallery/*.{jpg,jpeg,png,webp}')
+const Gallery = async () => {
+  const images = await fetchImageMetadata(
+    'public/gallery/*.{jpg,jpeg,png,webp}',
+  )
 
-const Gallery = () => {
   return images.map(({ src, height, width, base64 }) => (
-    <Dialog>
+    <Dialog key={src}>
       <DialogTrigger asChild>
         <AspectRatio
           ratio={3 / 2}

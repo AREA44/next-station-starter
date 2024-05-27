@@ -10,7 +10,7 @@ To run the application locally, make sure you have Node.js v18+ installed on you
 git clone https://github.com/AREA44/next-station-starter
 cd next-station-starter
 bun install
-bun run dev
+bun dev
 ```
 
 ## Quick Start
