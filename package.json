@@ -21,23 +21,23 @@
     "cobe": "^0.6.3",
     "geist": "^1.3.0",
     "glob": "^10.4.1",
-    "lucide-react": "^0.383.0",
+    "lucide-react": "^0.390.0",
     "next": "^15.0.0-rc.0",
     "postcss": "^8.4.38",
     "react": "^19.0.0-rc-f994737d14-20240522",
     "react-dom": "^19.0.0-rc-f994737d14-20240522",
     "sharp": "^0.33.4",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss": "^3.4.3",
+    "tailwindcss": "^3.4.4",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
-    "@types/node": "^20.14.0",
+    "@types/node": "^20.14.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "prettier": "^3.3.0",
-    "prettier-plugin-tailwindcss": "^0.6.1",
+    "prettier": "^3.3.1",
+    "prettier-plugin-tailwindcss": "^0.6.2",
     "typescript": "^5.4.5"
   }
 }
