@@ -9,8 +9,8 @@ To run the application locally, make sure you have Node.js v18+ installed on you
 ```bash
 git clone https://github.com/AREA44/next-station-starter
 cd next-station-starter
-bun install
-bun dev
+pnpm install
+pnpm dev
 ```
 
 ## Quick Start
