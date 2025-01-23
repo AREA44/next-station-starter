@@ -5,7 +5,7 @@ import { buttonVariants } from '@/components/ui/button'
 export default function NotFound() {
   return (
     <div className="flex h-screen flex-col items-center justify-center text-center">
-      <p className="text-sm text-muted-foreground">404</p>
+      <p className="text-muted-foreground text-sm">404</p>
       <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         Page not found
       </h2>

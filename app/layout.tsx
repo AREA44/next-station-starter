@@ -39,7 +39,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body
         className={cn(
-          'dark min-h-screen bg-background font-sans antialiased',
+          'dark bg-background min-h-screen font-sans antialiased',
           `${GeistSans.variable} ${GeistMono.variable}`,
         )}
       >
