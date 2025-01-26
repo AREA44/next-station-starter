@@ -1,23 +1,23 @@
-'use client'
+"use client";
 
-import React, { useEffect, useRef } from 'react'
-import createGlobe from 'cobe'
+import React, { useEffect, useRef } from "react";
+import createGlobe from "cobe";
 
 const Cobe = () => {
-  const canvasRef = useRef(null)
+  const canvasRef = useRef(null);
 
   useEffect(() => {
-    let phi = 0
-    let width = 0
+    let phi = 0;
+    let width = 0;
 
     const onResize = () => {
       if (canvasRef.current) {
-        width = canvasRef.current.offsetWidth
+        width = canvasRef.current.offsetWidth;
       }
-    }
+    };
 
-    window.addEventListener('resize', onResize)
-    onResize()
+    window.addEventListener("resize", onResize);
+    onResize();
 
     const globe = createGlobe(canvasRef.current, {
       devicePixelRatio: 2,
@@ -34,29 +34,29 @@ const Cobe = () => {
       glowColor: [1, 1, 1],
       markers: [{ location: [21.18541, 106.07503], size: 0.04 }],
       onRender: (state) => {
-        state.phi = phi
-        phi += 0.005
+        state.phi = phi;
+        phi += 0.005;
       },
-    })
+    });
 
     setTimeout(() => {
       if (canvasRef.current) {
-        canvasRef.current.style.opacity = '1'
+        canvasRef.current.style.opacity = "1";
       }
-    })
+    });
 
     return () => {
-      globe.destroy()
-      window.removeEventListener('resize', onResize)
-    }
-  }, [])
+      globe.destroy();
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
 
   return (
     <canvas
       ref={canvasRef}
       style={{ width: 400, height: 400, aspectRatio: 1 }}
     />
-  )
-}
+  );
+};
 
-export default Cobe
+export default Cobe;

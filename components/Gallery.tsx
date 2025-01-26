@@ -1,37 +1,37 @@
-import Image from 'next/image'
-import { glob } from 'glob'
-import sharp from 'sharp'
+import Image from "next/image";
+import { glob } from "glob";
+import sharp from "sharp";
 
-import { AspectRatio } from '@/components/ui/aspect-ratio'
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 async function fetchImageMetadata(pattern: string) {
   try {
-    const files = glob.sync(pattern, { posix: true })
+    const files = glob.sync(pattern, { posix: true });
     const imagePromises = files.map(async (file) => {
-      const src = file.replace('public', '')
-      const metadata = await sharp(file).metadata()
-      if (!metadata) throw new Error('Failed to fetch metadata for ' + file)
-      const { width, height, format } = metadata
+      const src = file.replace("public", "");
+      const metadata = await sharp(file).metadata();
+      if (!metadata) throw new Error("Failed to fetch metadata for " + file);
+      const { width, height, format } = metadata;
       const buffer = await sharp(file)
         .resize(10, 10, {
-          fit: 'inside',
+          fit: "inside",
         })
-        .toBuffer()
-      const base64 = `data:image/${format};base64,${buffer.toString('base64')}`
-      return { src, width, height, base64 }
-    })
-    return await Promise.all(imagePromises)
+        .toBuffer();
+      const base64 = `data:image/${format};base64,${buffer.toString("base64")}`;
+      return { src, width, height, base64 };
+    });
+    return await Promise.all(imagePromises);
   } catch (error) {
-    console.error('Error fetching image metadata:', error)
-    return []
+    console.error("Error fetching image metadata:", error);
+    return [];
   }
 }
 
 const Gallery = async () => {
   const images = await fetchImageMetadata(
-    'public/gallery/*.{jpg,jpeg,png,webp}',
-  )
+    "public/gallery/*.{jpg,jpeg,png,webp}",
+  );
 
   return images.map(({ src, height, width, base64 }) => (
     <Dialog key={src}>
@@ -52,7 +52,7 @@ const Gallery = async () => {
       </DialogTrigger>
       <DialogContent
         className={`${
-          height > width == true ? 'max-w-[400px]' : 'max-w-[600px]'
+          height > width == true ? "max-w-[400px]" : "max-w-[600px]"
         } rounded-lg p-0`}
       >
         <Image
@@ -66,7 +66,7 @@ const Gallery = async () => {
         />
       </DialogContent>
     </Dialog>
-  ))
-}
+  ));
+};
 
-export default Gallery
+export default Gallery;

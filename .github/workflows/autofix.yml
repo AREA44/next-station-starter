@@ -20,8 +20,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Format with Prettier
-        run: pnpm prettier -w . "!.github"
+      - name: Run Biome
+        run: biome format --write .
 
       - name: Run autofix.ci
         uses: autofix-ci/action@v1.3

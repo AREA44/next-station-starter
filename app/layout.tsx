@@ -1,11 +1,11 @@
-import '@/app/globals.css'
+import "@/app/globals.css";
 
-import type { Metadata } from 'next'
-import { GeistMono } from 'geist/font/mono'
-import { GeistSans } from 'geist/font/sans'
+import type { Metadata } from "next";
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 
-import { siteConfig } from '@/config/site'
-import { cn } from '@/lib/utils'
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -15,23 +15,23 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
-    locale: 'en_US',
-    type: 'website',
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
     title: siteConfig.name,
-    card: 'summary_large_image',
+    card: "summary_large_image",
   },
-}
+};
 
 interface RootLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
@@ -39,12 +39,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body
         className={cn(
-          'dark min-h-screen bg-background font-sans antialiased',
+          "dark min-h-screen bg-background font-sans antialiased",
           `${GeistSans.variable} ${GeistMono.variable}`,
         )}
       >
         {children}
       </body>
     </html>
-  )
+  );
 }

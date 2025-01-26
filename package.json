@@ -1,14 +1,14 @@
 {
   "name": "@area44/next-station-starter",
-  "version": "24.9.6",
+  "version": "25.01.27",
   "private": true,
   "description": "An image gallery starter built with Next.js",
   "author": "AREA44",
   "scripts": {
     "build": "next build",
     "dev": "next dev --turbo",
-    "format": "prettier --write . --cache",
-    "start": "next start"
+    "start": "next start",
+    "format": "biome format --write ."
   },
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^1.1.1",
@@ -31,12 +31,10 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+    "@biomejs/biome": "^1.9.4",
     "@types/node": "^22.10.10",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
-    "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.11",
     "typescript": "^5.7.3"
   },
   "packageManager": "pnpm@9.15.4"

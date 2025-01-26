@@ -1,8 +1,8 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import { siteConfig } from '@/config/site'
-import Cobe from '@/components/Cobe'
-import Gallery from '@/components/Gallery'
+import { siteConfig } from "@/config/site";
+import Cobe from "@/components/Cobe";
+import Gallery from "@/components/Gallery";
 
 export default function Home() {
   return (
@@ -29,7 +29,7 @@ export default function Home() {
       <footer className="border-t py-6 md:px-8 md:py-0">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <p className="text-center text-sm leading-loose text-muted-foreground">
-            Built by AREA44. The source code is available on{' '}
+            Built by AREA44. The source code is available on{" "}
             <Link
               href={siteConfig.links.github}
               target="_blank"
@@ -43,5 +43,5 @@ export default function Home() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
