@@ -36,7 +36,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" class="dark">
       <body
         className={cn(
           "dark min-h-screen bg-background font-sans antialiased",

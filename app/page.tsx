@@ -14,7 +14,7 @@ export default function Home() {
               <span className="flex max-h-full max-w-full items-center justify-center">
                 <Cobe />
               </span>
-              <span className="absolute inset-x-0 bottom-0 h-[400px] bg-gradient-to-b from-card/0 via-card to-card"></span>
+              <span className="absolute inset-x-0 bottom-0 h-[400px] bg-linear-to-b from-card/0 via-card to-card"></span>
             </div>
             <h1 className="scroll-m-20 text-4xl font-extrabold uppercase tracking-tight lg:text-5xl">
               {siteConfig.name}
