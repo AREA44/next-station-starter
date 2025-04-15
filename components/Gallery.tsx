@@ -3,7 +3,13 @@ import Image from "next/image";
 import sharp from "sharp";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 async function fetchImageMetadata(pattern: string) {
   try {
@@ -62,6 +68,9 @@ const Gallery = async () => {
           height > width ? "max-w-[400px]" : "max-w-[600px]"
         } rounded-lg p-0`}
       >
+        <VisuallyHidden>
+          <DialogTitle />
+        </VisuallyHidden>
         <Image
           src={src}
           placeholder="blur"
