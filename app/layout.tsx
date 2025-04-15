@@ -1,8 +1,8 @@
 import "@/app/globals.css";
 
-import type { Metadata } from "next";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
+import type { Metadata } from "next";
 
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { glob } from "glob";
+import Image from "next/image";
 import sharp from "sharp";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -9,19 +9,25 @@ async function fetchImageMetadata(pattern: string) {
   try {
     const files = glob.sync(pattern, { posix: true });
     const imagePromises = files.map(async (file) => {
-      const src = file.replace("public", "");
-      const metadata = await sharp(file).metadata();
-      if (!metadata) throw new Error("Failed to fetch metadata for " + file);
-      const { width, height, format } = metadata;
-      const buffer = await sharp(file)
-        .resize(10, 10, {
-          fit: "inside",
-        })
-        .toBuffer();
-      const base64 = `data:image/${format};base64,${buffer.toString("base64")}`;
-      return { src, width, height, base64 };
+      try {
+        const src = file.replace("public", "");
+        const metadata = await sharp(file).metadata();
+        if (!metadata) throw new Error(`Failed to fetch metadata for ${file}`);
+        const { width, height, format } = metadata;
+        const mimeType = format === "jpeg" ? "jpg" : format; // Normalize MIME type
+        const buffer = await sharp(file)
+          .resize(10, 10, { fit: "inside" })
+          .toBuffer();
+        const base64 = `data:image/${mimeType};base64,${buffer.toString("base64")}`;
+        return { src, width, height, base64 };
+      } catch (err) {
+        console.warn(`Skipping image ${file}:`, err);
+        return null;
+      }
     });
-    return await Promise.all(imagePromises);
+
+    // Return filtered images that were successfully processed
+    return (await Promise.all(imagePromises)).filter(Boolean);
   } catch (error) {
     console.error("Error fetching image metadata:", error);
     return [];
@@ -47,12 +53,13 @@ const Gallery = async () => {
             alt="Photo from Unsplash"
             className="object-cover transition will-change-auto group-hover:scale-110"
             fill
+            loading="lazy" // Lazy load for non-essential images
           />
         </AspectRatio>
       </DialogTrigger>
       <DialogContent
         className={`${
-          height > width == true ? "max-w-[400px]" : "max-w-[600px]"
+          height > width ? "max-w-[400px]" : "max-w-[600px]"
         } rounded-lg p-0`}
       >
         <Image
@@ -63,6 +70,7 @@ const Gallery = async () => {
           width={width}
           alt="Photo from Unsplash"
           className="rounded-lg object-contain"
+          loading="lazy" // Lazy load the modal content
         />
       </DialogContent>
     </Dialog>
