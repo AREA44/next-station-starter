@@ -39,6 +39,7 @@
     "@types/node": "^22.14.1",
     "@types/react": "^19.1.1",
     "@types/react-dom": "^19.1.2",
+    "next-rspack": "^15.3.0",
     "typescript": "^5.8.3"
   },
   "packageManager": "pnpm@10.8.0"
