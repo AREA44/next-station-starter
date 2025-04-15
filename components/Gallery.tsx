@@ -63,11 +63,7 @@ const Gallery = async () => {
           />
         </AspectRatio>
       </DialogTrigger>
-      <DialogContent
-        className={`${
-          height > width ? "max-w-[400px]" : "max-w-[600px]"
-        } rounded-lg p-0`}
-      >
+      <DialogContent className={"rounded-lg p-0"}>
         <VisuallyHidden>
           <DialogTitle />
         </VisuallyHidden>
