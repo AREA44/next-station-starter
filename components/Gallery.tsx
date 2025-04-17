@@ -1,6 +1,6 @@
 import { glob } from "glob";
-import sharp from "sharp";
 import Image from "next/image";
+import sharp from "sharp";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import {
