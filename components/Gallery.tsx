@@ -1,6 +1,6 @@
 import { glob } from "glob";
-import Image from "next/image";
 import sharp from "sharp";
+import Image from "next/image";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import {
@@ -11,29 +11,51 @@ import {
 } from "@/components/ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
-async function fetchImageMetadata(pattern: string) {
+type ImageMetadata = {
+  src: string;
+  width: number;
+  height: number;
+  base64: string;
+};
+
+async function fetchImageMetadata(pattern: string): Promise<ImageMetadata[]> {
   try {
     const files = glob.sync(pattern, { posix: true });
     const imagePromises = files.map(async (file) => {
       try {
         const src = file.replace("public", "");
-        const metadata = await sharp(file).metadata();
-        if (!metadata) throw new Error(`Failed to fetch metadata for ${file}`);
-        const { width, height, format } = metadata;
-        const mimeType = format === "jpeg" ? "jpg" : format; // Normalize MIME type
-        const buffer = await sharp(file)
+        const image = sharp(file);
+        const metadata = await image.metadata();
+        if (
+          !metadata ||
+          !metadata.width ||
+          !metadata.height ||
+          !metadata.format
+        ) {
+          throw new Error(`Incomplete metadata for ${file}`);
+        }
+
+        const mimeType = metadata.format === "jpeg" ? "jpg" : metadata.format;
+        const buffer = await image
+          .clone()
           .resize(10, 10, { fit: "inside" })
           .toBuffer();
         const base64 = `data:image/${mimeType};base64,${buffer.toString("base64")}`;
-        return { src, width, height, base64 };
+        return {
+          src,
+          width: metadata.width,
+          height: metadata.height,
+          base64,
+        };
       } catch (err) {
         console.warn(`Skipping image ${file}:`, err);
         return null;
       }
     });
 
-    // Return filtered images that were successfully processed
-    return (await Promise.all(imagePromises)).filter(Boolean);
+    return (await Promise.all(imagePromises)).filter(
+      (img): img is ImageMetadata => Boolean(img),
+    );
   } catch (error) {
     console.error("Error fetching image metadata:", error);
     return [];
@@ -45,41 +67,55 @@ const Gallery = async () => {
     "public/gallery/*.{jpg,jpeg,png,webp}",
   );
 
-  return images.map(({ src, height, width, base64 }) => (
-    <Dialog key={src}>
-      <DialogTrigger asChild>
-        <AspectRatio
-          ratio={3 / 2}
-          className="group relative cursor-zoom-in overflow-hidden rounded-lg after:pointer-events-none after:absolute after:inset-0"
-        >
+  if (!images.length) {
+    return (
+      <p className="text-muted-foreground text-center py-10">
+        No images found in the gallery.
+      </p>
+    );
+  }
+
+  return images.map(({ src, height, width, base64 }) => {
+    const altText =
+      src.split("/").pop()?.replace(/\..+$/, "").replace(/[-_]/g, " ").trim() ||
+      "Gallery image";
+
+    return (
+      <Dialog key={src}>
+        <DialogTrigger asChild>
+          <AspectRatio
+            ratio={3 / 2}
+            className="group relative cursor-zoom-in overflow-hidden rounded-lg after:pointer-events-none after:absolute after:inset-0"
+          >
+            <Image
+              src={src}
+              placeholder="blur"
+              blurDataURL={base64}
+              alt={altText}
+              className="object-cover transition will-change-auto group-hover:scale-110"
+              fill
+              loading="lazy"
+            />
+          </AspectRatio>
+        </DialogTrigger>
+        <DialogContent className="rounded-lg p-0">
+          <VisuallyHidden>
+            <DialogTitle>{altText}</DialogTitle>
+          </VisuallyHidden>
           <Image
             src={src}
             placeholder="blur"
             blurDataURL={base64}
-            alt="Photo from Unsplash"
-            className="object-cover transition will-change-auto group-hover:scale-110"
-            fill
-            loading="lazy" // Lazy load for non-essential images
+            height={height}
+            width={width}
+            alt={altText}
+            className="rounded-lg object-cover lg:h-lvh md:h-lvh sm:w-lvh"
+            loading="lazy"
           />
-        </AspectRatio>
-      </DialogTrigger>
-      <DialogContent className={"rounded-lg p-0"}>
-        <VisuallyHidden>
-          <DialogTitle />
-        </VisuallyHidden>
-        <Image
-          src={src}
-          placeholder="blur"
-          blurDataURL={base64}
-          height={height}
-          width={width}
-          alt="Photo from Unsplash"
-          className="rounded-lg object-contain"
-          loading="lazy" // Lazy load the modal content
-        />
-      </DialogContent>
-    </Dialog>
-  ));
+        </DialogContent>
+      </Dialog>
+    );
+  });
 };
 
 export default Gallery;
