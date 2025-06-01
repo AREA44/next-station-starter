@@ -31,7 +31,7 @@
     "sharp": "^0.34.2",
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.8",
-    "tw-animate-css": "^1.3.2"
+    "tw-animate-css": "^1.3.3"
   },
   "devDependencies": {
     "@area44/biome-config": "^0.4.1",
