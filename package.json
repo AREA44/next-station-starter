@@ -34,7 +34,7 @@
     "tw-animate-css": "^1.3.4"
   },
   "devDependencies": {
-    "@area44/biome-config": "^0.4.1",
+    "@area44/biome-config": "^2.0.1",
     "@biomejs/biome": "^2.0.0",
     "@types/node": "^22.15.31",
     "@types/react": "^19.1.8",

@@ -67,8 +67,8 @@ importers:
         version: 1.3.4
     devDependencies:
       '@area44/biome-config':
-        specifier: ^0.4.1
-        version: 0.4.1
+        specifier: ^2.0.1
+        version: 2.0.1
       '@biomejs/biome':
         specifier: ^2.0.0
         version: 2.0.0
@@ -95,8 +95,8 @@ packages:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
 
-  '@area44/biome-config@0.4.1':
-    resolution: {integrity: sha512-vUCfpvQ9d2Jtjb6wJAa4Mbei8JAKXEc3t6QWt73NF8pWcOALQxcMGTYMmZmm6WFUSXFitpBc9kWkxdAExQf5zA==}
+  '@area44/biome-config@2.0.1':
+    resolution: {integrity: sha512-OS+DL+Sw4teLAJBPnHTSSnBxcAJZskWULqMTRbhQcinPAMSac8EBojRTybIX0eZGblJ17EOt/qKickjYPn9GDA==}
 
   '@biomejs/biome@2.0.0':
     resolution: {integrity: sha512-BlUoXEOI/UQTDEj/pVfnkMo8SrZw3oOWBDrXYFT43V7HTkIUDkBRY53IC5Jx1QkZbaB+0ai1wJIfYwp9+qaJTQ==}
@@ -1102,7 +1102,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@area44/biome-config@0.4.1': {}
+  '@area44/biome-config@2.0.1': {}
 
   '@biomejs/biome@2.0.0':
     optionalDependencies:
