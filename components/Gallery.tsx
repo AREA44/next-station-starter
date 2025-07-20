@@ -54,7 +54,7 @@ async function fetchImageMetadata(pattern: string): Promise<ImageMetadata[]> {
     });
 
     return (await Promise.all(imagePromises)).filter(
-      (img): img is ImageMetadata => Boolean(img),
+      (img): img is ImageMetadata => Boolean(img)
     );
   } catch (error) {
     console.error("Error fetching image metadata:", error);
@@ -64,7 +64,7 @@ async function fetchImageMetadata(pattern: string): Promise<ImageMetadata[]> {
 
 const Gallery = async () => {
   const images = await fetchImageMetadata(
-    "public/gallery/*.{jpg,jpeg,png,webp}",
+    "public/gallery/*.{jpg,jpeg,png,webp}"
   );
 
   if (!images.length) {

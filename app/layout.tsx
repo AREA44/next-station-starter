@@ -40,7 +40,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={cn(
           "dark min-h-screen bg-background font-sans antialiased",
-          `${GeistSans.variable} ${GeistMono.variable}`,
+          `${GeistSans.variable} ${GeistMono.variable}`
         )}
       >
         {children}
